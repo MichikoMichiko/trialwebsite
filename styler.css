@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700italic");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400");
+
+html {
+  background: url('https://lh3.googleusercontent.com/p/AF1QipOlzP6e9crx6N0Nm1NguaY_7OD_HN5fFTDZpjRQ=s1360-w1360-h1020') no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  font-size: 10px;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+#logo {
+  animation: logo-entry 4s ease-in; 
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 40;
+}
+#logo-left {
+  position: absolute; /* Position it to the left */
+  top: 50%;
+  left: 150px; /* Move the logo further to the right */
+  transform: translateY(-50%); /* Vertically center */
+  animation: fadeInLogo 4s ease-in-out; /* Apply the fade animation */
+  z-index: 20; /* Ensure it is above other content */
+}
+
+#left-logo {
+  width: 250px; /* Size of the logo */
+  height: auto;
+}
+
+@keyframes fadeInLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+h1 {
+  animation: text-glow 2s ease-out infinite alternate;
+  font-family: 'SF Collegiate', sans-serif;
+  color: #006400; /* Dark green */
+  font-size: 48px;
+  font-size: 4.8rem;
+  font-weight: 400;
+  position: absolute;  
+  text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #006400, 0 0 40px #006400, 0 0 50px #006400, 0 0 60px #006400, 0 0 70px #006400; /* Dark green glow */
+  top: 50px; 
+    color: white; /* White text */
+    text-shadow: 
+        4px 4px 0 #006400, /* Green border on the bottom-right */
+        -4px -4px 0 #006400, /* Green border on the top-left */
+        4px -4px 0 #006400, /* Green border on the top-right */
+        -4px 4px 0 #006400; /* Green border on the bottom-left */
+
+}
+
+h1:before {
+  animation: before-glow 2s ease-out infinite alternate;
+  border-left: 535px solid transparent;
+  border-bottom: 10px solid #006400; /* Dark green */
+  content: ' ';
+  height: 0;
+  position: absolute;
+  right: -74px;
+  top: -10px;
+  width: 0;
+}
+
+h1:after {   
+  animation: after-glow 2s ease-out infinite alternate;
+  border-left: 100px solid transparent;
+  border-top: 16px solid #006400; /* Dark green */
+  content: ' ';
+  height: 0;
+  position: absolute;
+  right: -85px;  
+  top: 24px;  
+  transform: rotate(-47deg);
+  width: 0;
+}
+
+/* =========================================
+Log in form
+========================================= */
+#fade-box {
+  animation: input-entry 3s ease-in; 
+  z-index: 4;
+  background: url('https://media.giphy.com/media/TlK63EChAGgxq7kTcFW/giphy.gif?cid=ecf05e47hj5hb5e5c3cquogfeaxys0blgxilvdufkq7jy2l7&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center center; /* Use your GIF here */
+  background-size: cover; /* Ensures the image covers the box */
+  padding: 20px;
+}
+
+.stark-login form { 
+  animation: form-entry 3s ease-in-out; 
+  background: url('https://media.giphy.com/media/TlK63EChAGgxq7kTcFW/giphy.gif?cid=ecf05e47hj5hb5e5c3cquogfeaxys0blgxilvdufkq7jy2l7&ep=v1_gifs_search&rid=giphy.gif&ct=g') no-repeat center center; /* Add your GIF here */
+  background-size: cover; /* Adjust the background size to cover the form */
+  border: 6px solid #006400; /* Dark green */
+  box-shadow: 0 0 15px #006400; /* Dark green glow */
+  border-radius: 5px;
+  display: inline-block;
+  height: 220px;
+  margin: 200px auto 0;
+  position: relative;
+  z-index: 4;
+  width: 500px;
+  transition: 1s all;
+}
+
+
+
+.stark-login form:hover {
+  border: 6px solid #006400; /* Dark green */
+  box-shadow: 0 0 25px #006400; /* Dark green glow */
+  transition: 1s all ;
+}
+.stark-login input {
+  background-color: #fff; /* White background for the input box */
+  border: 1px solid #444; /* Default border color */
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #000; /* Initial box shadow */
+  color: #000; /* Text color inside the input box */
+  display: block;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-size: 1.3rem;
+  height: 40px;
+  margin: 20px auto 10px;
+  padding: 0 10px;
+  text-shadow: 0 -1px 0 #000;
+  width: 400px;
+}
+
+.stark-login input:focus {
+  background-color: #fff; /* White background stays on focus */
+  border-color: #28a745; /* Green border when focused */
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.7); /* Green glowing outer shadow */
+  color: #000; /* Keep text color black on focus */
+  outline: none; /* Remove default outline */
+}
+
+.stark-login input:invalid {
+  border: 2px solid green;
+  box-shadow: 0 0 10px rgba(0, 255, 0, .7); /* Green outer glow */
+}
+
+.stark-login button { 
+  animation: input-entry 3s ease-in; 
+  background: #222;
+  background: linear-gradient(#333, #222);
+  box-sizing: content-box;
+  border: 1px solid #444;
+  border-left-color: #000; 
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #000;
+  color: #fff;
+  display: block;
+  font-family: 'Cabin', helvetica, arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin: 20px auto; 
+  padding: 0; 
+  position: relative;
+  text-shadow: 0 -1px 0 #000;
+  width: 400px;
+  transition: 1s all ;
+}
+
+.stark-login button:hover,
+.stark-login button:focus {
+  background: #0C6125;
+  background: linear-gradient(#393939, #292929);
+  color: #00fffc;
+  outline: none;
+  transition: 1s all ;
+}
+
+.stark-login button:active {
+  background: #292929;
+  background: linear-gradient(#393939, #292929);
+  box-shadow: 0 1px 0 #000, inset 1px 0 1px #222;
+  top: 1px; 
+}
+
+/* =========================================
+Spinner
+========================================= */
+
+#circle1 { 
+  animation: circle1 4s linear infinite, circle-entry 6s ease-in-out; 
+  background: #000;
+  border-radius: 50%;
+  border: 10px solid #006400; /* Dark green */
+  box-shadow: 0 0 0 2px black, 0 0 0 6px #006400; /* Dark green glow */
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -250px;
+  overflow: hidden;
+  opacity: 0.4;
+  z-index: -3; 
+}
+
+#inner-circle1 {
+  background: #000; 
+  border-radius: 50%;
+  border: 36px solid #006400; /* Dark green */
+  height: 460px; 
+  width: 460px; 
+  margin: 10px;
+}
+
+#inner-circle1:before {
+  content: ' ';
+  width: 240px;
+  height: 480px;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#inner-circle1:after {
+  content: ' ';
+  width: 480px;
+  height: 240px; 
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+
+/* =========================================
+Animation Keyframes
+========================================= */
+
+@keyframes logo-entry {
+  0% {
+    opacity: 0;
+  }  
+  80% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle-entry {
+  0% {
+    opacity: 0;
+  }  
+  20% {
+    opacity: 0; 
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes input-entry {
+  0% {
+    opacity: 0;
+  }  
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes form-entry {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;   
+    padding: 0;
+  }  
+  20% {
+    height: 0;
+    border: 1px solid #006400; /* Dark green */
+    width: 0;
+    opacity: 0;  
+    padding: 0; 
+  }  
+  40% {
+    width: 0;
+    height: 220px;
+    border: 6px solid #006400; /* Dark green */
+    opacity: 1 ; 
+    padding: 0;
+  }
+  100% {
+    width: 500px;
+    height: 220px;
+    padding: 15px 20px;
+    border: 6px solid #006400; /* Dark green */
+    opacity: 1;
+  }
+}
+
+@keyframes text-glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #006400, 0 0 15px #006400, 0 0 20px #006400; /* Dark green glow */
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #006400, 0 0 15px #006400, 0 0 20px #006400; /* Dark green glow */
+  }
+}
+
+@keyframes before-glow {
+  0% {
+    border-left: 535px solid transparent;
+    border-bottom: 10px solid #006400; /* Dark green */
+  }
+  100% {
+    border-left: 535px solid transparent;
+    border-bottom: 10px solid #006400; /* Dark green */
+  }
+}
+
+@keyframes after-glow {
+  0% {
+    border-left: 100px solid transparent;
+    border-top: 16px solid #006400; /* Dark green */
+  }
+  100% {
+    border-left: 100px solid transparent;
+    border-top: 16px solid #006400; /* Dark green */
+  }
+}
